@@ -19,6 +19,11 @@ public class LongestIncreasingSubsequence{
         }
         System.out.println(res);
     }
+    // using dynamic programming
+
+    public static void dpsolve(int arr[],int n){
+
+    }
     public static void main(String args[]){
 
         int arr[]={3,4,2,8,10,5,1};
