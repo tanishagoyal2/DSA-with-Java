@@ -22,7 +22,25 @@ public class LongestIncreasingSubsequence{
     // using dynamic programming
 
     public static void dpsolve(int arr[],int n){
+            int res[]=new int[n];
+            int k=0;
+            res[k++]=arr[0];
+            for(int i=1;i<n;i++){
+                if(res[k-1]<arr[i]){
+                    res[k++]=arr[i];
+                }
+                else{
+                    //to find the ceil position of given no.
+                    int index=findIndex(res,arr[i]);
+                    res[index]=arr[i];
+                }
+            }
+            int len=res.length;
+            System.out.println(len);
+    }
 
+    public int findIndex(int res[],int ele){
+        
     }
     public static void main(String args[]){
 
