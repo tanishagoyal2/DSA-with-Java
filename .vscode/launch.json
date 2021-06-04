@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CoinChangeProblem",
+            "request": "launch",
+            "mainClass": "dynamic.CoinChangeProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch OptimalGame",
+            "request": "launch",
+            "mainClass": "dynamic.OptimalGame",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

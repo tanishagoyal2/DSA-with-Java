@@ -13,9 +13,9 @@ public class MinimumJumps {
                 if(i+j<n){
                     dp[i]=Math.min(dp[i],dp[i+j]+1);
                 }
-                System.out.println(i+" is "+dp[i]);
             }
         }
+        System.out.println(dp[0]);
     }
     public static void main(String args[]){
 
