@@ -39,7 +39,6 @@ public class CoinChangeProblem {
                     dp[i]+=dp[i-arr[j]];
                 }
             }
-            System.out.println();
         }
         System.out.println(dp[sum]);
     }
