@@ -31,20 +31,36 @@ public class LongestIncreasingSubsequence{
                 }
                 else{
                     //to find the ceil position of given no.
-                    int index=findIndex(res,arr[i]);
+                    int index=findIndex(res,arr[i],k);
                     res[index]=arr[i];
                 }
             }
-            int len=res.length;
-            System.out.println(len);
+            System.out.println(k);
+            for(int i=0;i<k;i++){
+                System.out.print(res[i]);
+            }
     }
 
-    public int findIndex(int res[],int ele){
-        
+    public static  int findIndex(int res[],int ele,int high){
+        int low=0;
+        int index=high;
+        while(low<high){
+            int mid=(low+high)/2;
+            if(ele<res[mid]){
+                high=mid;
+            }
+            else if(ele>res[mid]){
+                low=mid+1;
+            }
+            else{
+                index=mid;
+            }
+        }
+        return index;
     }
     public static void main(String args[]){
 
-        int arr[]={3,4,2,8,10,5,1};
-        solve(arr,7);
+        int arr[]={3,4,2,8,5,1,10,6,7,9};
+        dpsolve(arr,10);
     }
 }

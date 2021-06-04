@@ -1,0 +1,301 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch FillNextSiblings",
+            "request": "launch",
+            "mainClass": "FillNextSiblings",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch NQueensProblem",
+            "request": "launch",
+            "mainClass": "backtracking.NQueensProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch RatInAMaze",
+            "request": "launch",
+            "mainClass": "backtracking.RatInAMaze",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch SudukoSolve",
+            "request": "launch",
+            "mainClass": "backtracking.SudukoSolve",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTree",
+            "request": "launch",
+            "mainClass": "binary_tree.BinaryTree",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTreeQuestions",
+            "request": "launch",
+            "mainClass": "binary_tree.BinaryTreeQuestions",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch Movie",
+            "request": "launch",
+            "mainClass": "compareTo.Movie",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoublelinkedList",
+            "request": "launch",
+            "mainClass": "doubleLinkedList.DoublelinkedList",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch EditDistance",
+            "request": "launch",
+            "mainClass": "dynamic.EditDistance",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibbonaci",
+            "request": "launch",
+            "mainClass": "dynamic.Fibbonaci",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch HuffmanCoding",
+            "request": "launch",
+            "mainClass": "dynamic.HuffmanCoding",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch LeastCommonSubsequence",
+            "request": "launch",
+            "mainClass": "dynamic.LeastCommonSubsequence",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch LongestIncreasingSubsequence",
+            "request": "launch",
+            "mainClass": "dynamic.LongestIncreasingSubsequence",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinimumCoinsSum",
+            "request": "launch",
+            "mainClass": "dynamic.MinimumCoinsSum",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinimumJumps",
+            "request": "launch",
+            "mainClass": "dynamic.MinimumJumps",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch SubsetSumProblem",
+            "request": "launch",
+            "mainClass": "dynamic.SubsetSumProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch Files",
+            "request": "launch",
+            "mainClass": "files.Files",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch clasid",
+            "request": "launch",
+            "mainClass": "first.clasid",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArticulationPoint",
+            "request": "launch",
+            "mainClass": "graphs.ArticulationPoint",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BellmanFordAlgo",
+            "request": "launch",
+            "mainClass": "graphs.BellmanFordAlgo",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BridgesInGraph",
+            "request": "launch",
+            "mainClass": "graphs.BridgesInGraph",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConnectdComm",
+            "request": "launch",
+            "mainClass": "graphs.ConnectdComm",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch DetectCycleUsingPathCompression",
+            "request": "launch",
+            "mainClass": "graphs.DetectCycleUsingPathCompression",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph",
+            "request": "launch",
+            "mainClass": "graphs.Graph",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch HamiltonionCycle",
+            "request": "launch",
+            "mainClass": "graphs.HamiltonionCycle",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch KrushkalAlgo",
+            "request": "launch",
+            "mainClass": "graphs.KrushkalAlgo",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrimsAlgo",
+            "request": "launch",
+            "mainClass": "graphs.PrimsAlgo",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch detectCycleUsingUnion",
+            "request": "launch",
+            "mainClass": "graphs.detectCycleUsingUnion",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch dijikshtra",
+            "request": "launch",
+            "mainClass": "graphs.dijikshtra",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch ActivitySelection",
+            "request": "launch",
+            "mainClass": "greedy.ActivitySelection",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch JobScheduling",
+            "request": "launch",
+            "mainClass": "greedy.JobScheduling",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch KnapsackProblem",
+            "request": "launch",
+            "mainClass": "greedy.KnapsackProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hashing",
+            "request": "launch",
+            "mainClass": "hashing.Hashing",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryMaxHeap",
+            "request": "launch",
+            "mainClass": "heaps.BinaryMaxHeap",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryMinHeap",
+            "request": "launch",
+            "mainClass": "heaps.BinaryMinHeap",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch priorityQueue",
+            "request": "launch",
+            "mainClass": "heaps.priorityQueue",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch LinkedListClass",
+            "request": "launch",
+            "mainClass": "linkedList.LinkedListClass",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashMapping",
+            "request": "launch",
+            "mainClass": "mapping.HashMapping",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountingSort",
+            "request": "launch",
+            "mainClass": "sorting.CountingSort",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch MergeSort",
+            "request": "launch",
+            "mainClass": "sorting.MergeSort",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickSort",
+            "request": "launch",
+            "mainClass": "sorting.QuickSort",
+            "projectName": "first"
+        }
+    ]
+}
