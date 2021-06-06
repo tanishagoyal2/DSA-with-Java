@@ -28,9 +28,10 @@ public class EggDroppingProblem {
                    }
                    dp[i][j]+=1;
                 }
-                System.out.println("i "+i+" j"+j+" is "+dp[i][j]);
+            
             }
         }
+        System.out.println(dp[e][f]);
     }
 
     public static void main(String args[]){
