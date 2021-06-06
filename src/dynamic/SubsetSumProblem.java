@@ -52,13 +52,6 @@ public class SubsetSumProblem {
 	public static void main(String args[]) {
 		int set[] = { 3, 34, 10, 12, 5, 1 };
         int sum = 9;
-        int n = set.length;
         isSubset(set,sum);
-        if (isSubset(set, n, sum) == true)
-            System.out.println("Found a subset"
-                               + " with given sum");
-        else
-            System.out.println("No subset with"
-                               + " given sum");
 	}
 }

@@ -9,7 +9,6 @@ public static void solve(int n){
         for(int j=0;j<i;j++){
             dp[i]+=dp[j]*dp[i-j-1];
         }
-        System.out.println(i+" "+dp[i]);
     }
     System.out.println(dp[n]);
 }

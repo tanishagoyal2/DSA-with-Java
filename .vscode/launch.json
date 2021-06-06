@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch NonAdjacentSum",
+            "request": "launch",
+            "mainClass": "dynamic.NonAdjacentSum",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch BST_Trees",
             "request": "launch",
             "mainClass": "dynamic.BST_Trees",
