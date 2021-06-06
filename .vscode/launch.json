@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EggDroppingProblem",
+            "request": "launch",
+            "mainClass": "dynamic.EggDroppingProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch KnapsackProblem",
             "request": "launch",
             "mainClass": "dynamic.KnapsackProblem",
