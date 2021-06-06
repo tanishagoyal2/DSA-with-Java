@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch KnapsackProblem",
+            "request": "launch",
+            "mainClass": "dynamic.KnapsackProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch CoinChangeProblem",
             "request": "launch",
             "mainClass": "dynamic.CoinChangeProblem",
