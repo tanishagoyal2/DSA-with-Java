@@ -48,10 +48,37 @@ public class SubsetSumProblem {
 		}
 		System.out.println(dp[set.length][sum]);
 	}
-	
+	//find the no of subsets possible with the given sum
+	public static void subsetNumbers(int arr[],int sum,int n){
+		int dp[][]=new int [n+1][sum+1];
+		for(int i=0;i<=sum;i++){
+			dp[0][i]=0;
+		}
+		for(int i=0;i<=n;i++){
+			dp[i][0]=1;
+		}
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=sum;j++){
+				if(j<arr[i-1]){
+					dp[i][j]=dp[i-1][j];
+				}
+				else{
+					dp[i][j]=dp[i-1][j]+dp[i][j-arr[i-1]];
+				}
+				System.out.println(dp[i][j]);
+			}
+		}
+		System.out.println(dp[n][sum]);
+	}
+
+//print the subsets possible with given sum
+public static void printSubset(int arr[],int sum,int n){
+
+}
+
 	public static void main(String args[]) {
-		int set[] = { 3, 34, 10, 12, 5, 1 };
-        int sum = 9;
-        isSubset(set,sum);
+		int set[] = {2,5,3};
+        int sum = 5;
+        subsetNumbers(set,sum,3);
 	}
 }
