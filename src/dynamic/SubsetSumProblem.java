@@ -1,6 +1,7 @@
 package dynamic;
 
 import java.util.ArrayDeque;
+import java.util.HashMap;
 
 public class SubsetSumProblem {
 
@@ -74,8 +75,8 @@ public class SubsetSumProblem {
 		System.out.println(dp[n][sum]);
 	}
 
-//print the subsets possible with given sum
-public static void printSubset(int arr[],int sum,int n){
+	//print the subsets possible with given sum
+	public static void printSubset(int arr[],int sum,int n){
 
 	boolean dp[][]=new boolean [n+1][sum+1];
 	for(int i=0;i<=n;i++){
@@ -128,10 +129,32 @@ public static void printSubset(int arr[],int sum,int n){
 	}
 }
 
+	// find the no of continous subarray with the given sum
+	public static void continousSubsArray(int arr[],int sum,int n){
+		int prefixSum[]=new int[n+1];
+		prefixSum[0]=0;
+		HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();	
+		hm.put(0,1);
+		int count=0;
+		for(int i=1;i<=n;i++){
+			prefixSum[i]=prefixSum[i-1]+arr[i-1];
+			System.out.println("prefix i "+prefixSum[i]);
+			System.out.println(prefixSum[i]-sum);
+			if(hm.containsKey(prefixSum[i]-sum)){
+				count+=hm.get(prefixSum[i]-sum);
+			}
+			if(hm.containsKey(prefixSum[i])){
+				hm.put(prefixSum[i],hm.get(prefixSum[i])+1);
+			}
+			else
+				hm.put(prefixSum[i], 1);
+		}
+		System.out.println(count);
+	}
 	public static void main(String args[]) {
-		int set[] = {4,2,7,1,3};
-        int sum = 10;
-        printSubset(set,sum,5);
+		int set[] = {2,8,-3,-5,2,-4,6,1,2,1,-3,4};
+        int sum = 0;
+        continousSubsArray(set,sum,12);
 	}
 }
 class Pair{
