@@ -1,7 +1,6 @@
 package first;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class clasid {
@@ -14,5 +13,6 @@ public class clasid {
 		BigDecimal deci=new BigDecimal(no);
 		//map.put(deci,no);
 	}
+	scanner.close();
 	}
 }

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch genericTree",
+            "request": "launch",
+            "mainClass": "genericTree.genericTree",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch NonAdjacentSum",
             "request": "launch",
             "mainClass": "dynamic.NonAdjacentSum",
