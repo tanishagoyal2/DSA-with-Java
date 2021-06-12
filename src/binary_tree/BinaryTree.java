@@ -86,6 +86,60 @@ public class BinaryTree {
 		System.out.println("Node inserted");
 	}
 	
+
+	public void deleteNode(Node node,int key){
+		Node curr=node;
+		Node parent=null;
+		while(curr!=null && curr.data!=key){
+			parent=curr;
+			if(curr.data<key){
+				curr=curr.right;
+			}
+			else{
+				curr=curr.left;
+			}
+		}
+		//if node to be deleted is the leaf node
+		if(curr.left==null && curr.right==null){
+			if(parent.left==curr){
+				parent.left=null;
+			}
+			else{
+				parent.right=null;
+			}
+		}
+		else if(curr.left!=null && curr.right!=null){
+			//find the inorder successor
+			Node successor=getMinimumKey(curr);
+			int val=successor.data;
+			//delete the successor node
+			deleteNode(root,successor.data );
+			//replace it with the deleting node
+			curr.data=val;
+		}
+		else{
+			Node child=curr.left!=null?curr.left:curr.right;
+			if(curr!=root){
+				if(curr==parent.left){
+					parent.left=child;
+				}
+				else{
+					parent.right=child;
+				}
+			}
+			else{
+				root=child;
+			}
+		}
+		System.out.println("deletion completed");
+	}
+	public static Node getMinimumKey(Node curr)
+    {
+        while (curr.left != null) {
+            curr = curr.left;
+        }
+        return curr;
+    }
 	public void printinorder(Node start) {
 		if(start==null) {
 			return;
@@ -113,7 +167,7 @@ public class BinaryTree {
 			return;
 		}
 		
-		System.out.print(start.data);
+		System.out.print(start.data+"  ");
 		printpreorder(start.left);
 		printpreorder(start.right);
 	}
@@ -200,14 +254,15 @@ public class BinaryTree {
 	public static void main(String []args) {
 		BinaryTree tree=new BinaryTree();
 		tree.root= new Node(10);
-	    tree.root.left= new Node(2);
-	    tree.root.right= new Node(3);
-	    tree.root.left.left= new Node(4);
+	    tree.root.left= new Node(4);
+	    tree.root.right= new Node(30);
+	    tree.root.left.left= new Node(2);
 	    tree.root.left.right= new Node(5);
 	       
 	    System.out.println("Level order traversal of binary tree is ");
-	    Height height=new Height();
-	    System.out.println(tree.DiameterOfTree(tree.root,height));
+		tree.printpreorder(tree.root);
+	    tree.deleteNode(tree.root, 4);
+		tree.printpreorder(tree.root);
 	}
 }
 class DiaPair{
