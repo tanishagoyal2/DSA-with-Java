@@ -89,7 +89,6 @@ public class BinaryTree {
 		}
 		System.out.println("Node inserted");
 	}
-	
 
 	public void deleteNode(Node node,int key){
 		Node curr=node;
@@ -167,7 +166,6 @@ public class BinaryTree {
 		System.out.print(start.data);
 	}
 	
-	
 	public void printpreorder(Node start) {
 		if(start==null) {
 			return;
@@ -243,6 +241,7 @@ public class BinaryTree {
 		else
 			return false;
 	}	
+	
 	int count =0;
 	public void countleaves(Node node) {
 		if(node==null)
@@ -295,6 +294,45 @@ public class BinaryTree {
             System.out.print(entry.getValue().data);
         }
     }
+	
+	public void bottomView(Node root)
+    {
+       class OBJ{
+           int hd;
+           Node node;
+           OBJ(Node node,int h){
+               this.hd=h;
+               this.node=node;
+           }
+       }
+       HashMap<Integer,Node> hm=new HashMap<Integer,Node>();
+       Queue<OBJ> queue=new LinkedList<OBJ>();
+       if (root == null) {
+            return;
+        }
+        else {
+            queue.add(new OBJ(root, 0));
+        }
+        
+        while(!queue.isEmpty()){
+            OBJ top=queue.poll();
+            hm.put(top.hd,top.node);
+            if(top.node.left!=null){
+				System.out.println("tleft added "+top.node.left.data);
+                queue.add(new OBJ(top.node.left,top.hd-1));
+            }
+            if(top.node.right!=null){
+				System.out.println("right added "+top.node.right.data);
+                queue.add(new OBJ(top.node.right,top.hd+1));
+            }
+        }
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+        for(HashMap.Entry<Integer, Node> entry :hm.entrySet()){
+            System.out.print(entry.getValue().data);
+        }
+    }
+	
+	
 	public static void main(String []args) {
 		BinaryTree tree=new BinaryTree();
 		tree.root= new Node(10);
