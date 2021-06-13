@@ -1,5 +1,9 @@
 package binary_tree;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Node{
 	int data;
@@ -253,6 +257,44 @@ public class BinaryTree {
 		}
 	}
 	
+	public void topView(Node root)
+    {
+       class OBJ{
+           int hd;
+           Node node;
+           OBJ(Node node,int h){
+               this.hd=h;
+               this.node=node;
+           }
+       }
+       HashMap<Integer,Node> hm=new HashMap<Integer,Node>();
+       Queue<OBJ> queue=new LinkedList<OBJ>();
+       if (root == null) {
+            return;
+        }
+        else {
+            queue.add(new OBJ(root, 0));
+        }
+        
+        while(!queue.isEmpty()){
+            OBJ top=queue.poll();
+            if(!hm.containsKey(top.hd)){
+                hm.put(top.hd,top.node);
+            }
+            if(top.node.left!=null){
+				System.out.println("tleft added "+top.node.left.data);
+                queue.add(new OBJ(top.node.left,top.hd-1));
+            }
+            if(top.node.right!=null){
+				System.out.println("right added "+top.node.right.data);
+                queue.add(new OBJ(top.node.right,top.hd+1));
+            }
+        }
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+        for(HashMap.Entry<Integer, Node> entry :hm.entrySet()){
+            System.out.print(entry.getValue().data);
+        }
+    }
 	public static void main(String []args) {
 		BinaryTree tree=new BinaryTree();
 		tree.root= new Node(10);
@@ -260,11 +302,10 @@ public class BinaryTree {
 	    tree.root.right= new Node(30);
 	    tree.root.left.left= new Node(2);
 	    tree.root.left.right= new Node(5);
-	       
+	    tree.root.right.left= new Node(11);
+	    tree.root.right.right= new Node(12);
 	    System.out.println("Level order traversal of binary tree is ");
-		tree.printpreorder(tree.root);
-	    tree.deleteNode(tree.root, 4);
-		tree.printpreorder(tree.root);
+		tree.topView(tree.root);
 	}
 }
 class DiaPair{
