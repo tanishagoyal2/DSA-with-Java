@@ -133,6 +133,7 @@ public class BinaryTree {
 		}
 		System.out.println("deletion completed");
 	}
+	
 	public static Node getMinimumKey(Node curr)
     {
         while (curr.left != null) {
@@ -140,6 +141,7 @@ public class BinaryTree {
         }
         return curr;
     }
+	
 	public void printinorder(Node start) {
 		if(start==null) {
 			return;

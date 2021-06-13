@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AVL",
+            "request": "launch",
+            "mainClass": "binary_tree.AVL",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch genericTree",
             "request": "launch",
             "mainClass": "genericTree.genericTree",
