@@ -227,6 +227,26 @@ public class LinkedListClass {
 		}
 	}
 	
+	//segregate the odd and even nodes;
+	public static Node oddEven(Node head){
+		LinkedListClass odd=new LinkedListClass();
+		LinkedListClass even=new LinkedListClass();
+		Node curr=head;
+		while(curr!=null){
+			if(curr.data%2==0){
+				even.append(curr.data);
+			}
+			else{
+				odd.append(curr.data);
+			}
+		}
+		Node last=odd.head;
+		while(last.next!=null){
+			last=last.next;
+		}
+		last.next=even.head;
+		return odd.head;
+	}
 	public static void main(String [] args) {
 		LinkedListClass list1=new LinkedListClass();
 		Scanner sc=new Scanner(System.in);
