@@ -332,7 +332,32 @@ public class BinaryTree {
         }
     }
 	
-	
+	public boolean isBst(Node node){
+		if(node ==null){
+			return true;
+		}
+		else{
+			boolean l=true,r=true;
+			if(node.left!=null){
+				if(node.left.data<node.data){
+					l=isBst(node.left);
+				}
+				else{
+					return false;
+				}
+			}
+			if(node.right!=null){
+				if(node.right.data>node.data){
+					r=isBst(node.right);
+				}
+				else{
+					return false;
+				}
+			}
+			return l&&r;
+		}
+	}
+
 	public static void main(String []args) {
 		BinaryTree tree=new BinaryTree();
 		tree.root= new Node(10);
@@ -341,9 +366,9 @@ public class BinaryTree {
 	    tree.root.left.left= new Node(2);
 	    tree.root.left.right= new Node(5);
 	    tree.root.right.left= new Node(11);
-	    tree.root.right.right= new Node(12);
+	    tree.root.right.right= new Node(120);
 	    System.out.println("Level order traversal of binary tree is ");
-		tree.topView(tree.root);
+		System.out.println(tree.isBst(tree.root));
 	}
 }
 class DiaPair{

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch activitySelectionProblem",
+            "request": "launch",
+            "mainClass": "dynamic.activitySelectionProblem",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch AVL",
             "request": "launch",
             "mainClass": "binary_tree.AVL",

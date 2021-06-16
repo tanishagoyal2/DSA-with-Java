@@ -205,28 +205,37 @@ public class LinkedListClass {
 		if(carry>0)
 			temp.next=new Node(carry);
 	}
+	public void remove_duplicate() {
+
+		// write your code here
+		HashMap<Integer,Node> hm=new HashMap<Integer,Node>();
+		Node curr=head;
+		Node prev=head;
+		while(curr!=null){
+			if(hm.containsKey(curr.data)){
+				System.out.println("duplicate "+curr.data);
+				prev.next=curr.next;
+				curr=curr.next;
+				continue;
+			}
+			else{
+				System.out.println(curr.data+" added");
+				hm.put(curr.data,curr);
+			}
+			prev=curr;
+			curr=curr.next;
+		}
+	}
 	
 	public static void main(String [] args) {
 		LinkedListClass list1=new LinkedListClass();
-		LinkedListClass list2=new LinkedListClass();
-		LinkedListClass list3=new LinkedListClass();
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
 		for(int i=0;i<n;i++) {
 			list1.append(sc.nextInt());
 		}
-		System.out.println("enter n value");
-		n=sc.nextInt();
-		for(int i=0;i<n;i++) {
-			list2.append(sc.nextInt());
-		}
-		System.out.println("first list elements");
+		list1.remove_duplicate();
 		list1.printNode();
-		System.out.println("second list elements");
-		list2.printNode();
-		list3.addTwoNos(list1.head, list2.head);
-		System.out.println("resultant list elements");
-		list3.printNode();
 		sc.close();
 	}
 }

@@ -70,7 +70,7 @@ class BridgesInGraph
 		{ 
 			parent[i] = NIL; 
 			visited[i] = false; 
-		} 
+		}
 
 
 		for (int i = 0; i < V; i++) 

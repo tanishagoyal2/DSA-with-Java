@@ -44,6 +44,7 @@ public class PrimsAlgo {
 			key[i]=Integer.MAX_VALUE;
 			mst[i]=false;
 		}
+		//so that first vertex is always included
 		key[s]=0;
 		parent[s]=-1;
 		System.out.println("perfecly worked fine");
