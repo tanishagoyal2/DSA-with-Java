@@ -226,6 +226,32 @@ public class LinkedListClass {
 			curr=curr.next;
 		}
 	}
+	//merge two sorted linkedlist
+	public static void merging(Node a,Node b){
+		LinkedListClass newnode=new LinkedListClass();
+		while(a!=null && b!=null){
+			if(a.data<b.data){
+				newnode.append(a.data);
+				a=a.next;
+			}
+			else{
+				newnode.append(b.data);
+				b=b.next;
+			}
+		}
+		if(a==null){
+			while(b!=null){
+				newnode.append(b.data);
+				b=b.next;
+			}
+		}
+		else{
+			while(a!=null){
+				newnode.append(a.data);
+				a=a.next;
+			}
+		}
+	}
 	
 	//segregate the odd and even nodes;
 	public static Node oddEven(Node head){

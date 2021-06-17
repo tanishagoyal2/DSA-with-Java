@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch array",
+            "request": "launch",
+            "mainClass": "backtracking.array",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch activitySelectionProblem",
             "request": "launch",
             "mainClass": "dynamic.activitySelectionProblem",
