@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch prefix",
+            "request": "launch",
+            "mainClass": "String.prefix",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch array",
             "request": "launch",
             "mainClass": "backtracking.array",
