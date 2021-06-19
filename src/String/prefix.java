@@ -3,6 +3,7 @@ package String;
 import java.util.Scanner;
 
 public class prefix {
+//program to find the prefix string from the set of strings
     public static void solve(int n,String arr[]){
         int i=0;
         String prefix="";
@@ -28,6 +29,7 @@ public class prefix {
         }
         System.out.println(prefix);
     }
+    //main function to run the program
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
