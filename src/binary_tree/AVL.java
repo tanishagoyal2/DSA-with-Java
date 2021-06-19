@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class AVL {
     AVLNode root;
 
+    //function to insert a node in avl tree
     public AVLNode insert(AVLNode node,int key){
         if (node == null)
         return (new AVLNode(key));
@@ -49,6 +50,7 @@ public class AVL {
 
     }
 
+    //function to calculate the height factor of a node
 
     public int Height(AVLNode node){
         if(node==null){
@@ -98,6 +100,8 @@ public class AVL {
 		printpreorder(start.left);
 		printpreorder(start.right);
 	}
+    
+    //main function to run the program
     public static void main(String args[]){
         AVL avl=new AVL();
         Scanner sc=new Scanner(System.in);
@@ -116,6 +120,7 @@ public class AVL {
     }
     
 }
+//class to store the node data and its height value;
 class AVLNode{
     int data;
     int height;
