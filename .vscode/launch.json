@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Eulerian",
+            "request": "launch",
+            "mainClass": "graphs.Eulerian",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch prefix",
             "request": "launch",
             "mainClass": "String.prefix",
