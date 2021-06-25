@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch arraysQuestion",
+            "request": "launch",
+            "mainClass": "arrays.arraysQuestion",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch Eulerian",
             "request": "launch",
             "mainClass": "graphs.Eulerian",
