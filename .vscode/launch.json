@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch bitQuestions",
+            "request": "launch",
+            "mainClass": "arrays.bitQuestions",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
+            "name": "Launch knightplace",
+            "request": "launch",
+            "mainClass": "backtracking.knightplace",
+            "projectName": "first"
+        },
+        {
+            "type": "java",
             "name": "Launch arraysQuestion",
             "request": "launch",
             "mainClass": "arrays.arraysQuestion",
